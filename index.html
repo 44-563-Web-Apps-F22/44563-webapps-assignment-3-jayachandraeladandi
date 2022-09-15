@@ -68,6 +68,20 @@
             </tr>
 
             </table>
+            <hr></hr>
+            <h7>Snippet</h7>
+            <blockquote>“Remove Specific Categories From The Loop”</blockquote >
+                <a href="https://css-tricks.com/snippets/wordpress/remove-specific-categories-from-the-loop/">question</a>
+                
+                
+                <?php query_posts('cat=-3'); ?>
+
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                  <h3></h3>	
+                  <p><?php the_time('F jS, Y') ?></p>
+                  <?php the_content(); ?>
+                <?php endwhile; ?>
             
            
         
